@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import Message from './message';
 import Button from '../Button';
 import './style.scss';
@@ -7,7 +7,7 @@ const Footer = () => {
   const [messageCollect, updateMessageCollect] = useState([
     {
       name: 'Guestbook User',
-      subject: 'aaaaa',
+      subject: 'Test',
       message:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       date: '2020-11-09 8:26:42',

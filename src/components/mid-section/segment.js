@@ -1,6 +1,5 @@
 import React from 'react';
 import LaptopIcon from '../../assets/svg/laptop';
-import Button from '../Button';
 import './style.scss';
 
 const Segment = (props) => {
