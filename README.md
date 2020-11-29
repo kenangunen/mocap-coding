@@ -1,6 +1,6 @@
 # CSS Flexbox Dashboard
 
-https://cssflexboxdashboard.netlify.app/
+<!-- https://cssflexboxdashboard.netlify.app/ -->
 
 ## Installation
 
