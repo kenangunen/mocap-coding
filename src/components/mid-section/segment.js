@@ -1,6 +1,7 @@
 import React from 'react';
 import LaptopIcon from '../../assets/svg/laptop';
 import './style.scss';
+import PropTypes from 'prop-types';
 
 const Segment = (props) => {
   const { color, text } = props;
@@ -13,6 +14,11 @@ const Segment = (props) => {
       <p className='segmentText'>{text}</p>
     </div>
   );
+};
+
+Segment.propTypes = {
+  color: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default Segment;

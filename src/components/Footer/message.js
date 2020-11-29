@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './style.scss';
+import PropTypes from 'prop-types';
 
 const Message = (props) => {
-  // const [messageCollect, updateMessageCollect] = useState([]);
   const { name, subject, message, date } = props;
 
   return (
@@ -17,6 +17,13 @@ const Message = (props) => {
       </div>
     </div>
   );
+};
+
+Message.propTypes = {
+  name: PropTypes.string,
+  subject: PropTypes.string,
+  message: PropTypes.string,
+  date: PropTypes.string,
 };
 
 export default Message;
