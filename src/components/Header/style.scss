@@ -1,0 +1,129 @@
+@import '../../assets/style/global.scss';
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 7.5rem;
+  background-color: $gray;
+  padding: 0 $space-g;
+  border: 2px solid $dark-gray;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  ul {
+    display: flex;
+
+    li {
+      cursor: pointer;
+      font-size: $text-lg;
+      font-weight: $semibold;
+      margin-right: $space-xl;
+      text-transform: upercase;
+      transition: 0.3s;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 19rem;
+  height: 100%;
+
+  .hexagon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 55px;
+    height: 31.75px;
+    background-color: $dark-gray;
+    margin: 15.88px 0;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      border-left: 27.5px solid transparent;
+      border-right: 27.5px solid transparent;
+    }
+
+    &:before {
+      bottom: 100%;
+      border-bottom: 15.88px solid $dark-gray;
+    }
+
+    &:after {
+      top: 100%;
+      width: 0;
+      border-top: 15.88px solid$dark-gray;
+    }
+
+    &:hover .iconContainer {
+      background-color: $white !important;
+    }
+    .iconContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: $light-gray;
+      transition: 0.3s;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .socialMedia {
+    width: 16rem;
+  }
+  .hexagon {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .socialMedia {
+    display: none !important;
+  }
+  header {
+    justify-content: center !important;
+  }
+  nav {
+    width: 80% !important;
+  }
+  nav ul {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+  nav ul li {
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  header {
+    justify-content: center !important;
+  }
+  nav {
+    width: 100% !important;
+  }
+  nav ul {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+  nav ul li {
+    margin-right: 0 !important;
+  }
+}

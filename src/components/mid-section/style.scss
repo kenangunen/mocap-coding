@@ -1,0 +1,215 @@
+@import '../../assets/style/global.scss';
+
+@mixin hexegon($color) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 86.6px;
+  background-color: $color;
+  margin: 43.3px 0;
+  color: $white;
+
+  svg {
+    position: absolute;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-bottom: 43.3px solid $color;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 43.3px solid $color;
+  }
+}
+
+.midSection {
+  padding: 100px 200px;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-family: $roboto-con;
+    letter-spacing: 1.6px;
+    font-size: $h2-l;
+    color: $ex-light-gray;
+    text-transform: uppercase;
+    margin-bottom: $space-g;
+  }
+  .sectionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .segmentContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+      height: auto;
+
+      .segment {
+        width: 100%;
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .hexagonContainerOrange {
+          @include hexegon($orange);
+        }
+        .hexagonContainerGray {
+          @include hexegon($light-gray);
+        }
+        .hexagonContainerGreen {
+          @include hexegon($green);
+        }
+
+        .segmentName {
+          margin-top: $space-m;
+          font-size: $h2;
+          font-weight: $semibold;
+        }
+
+        .segmentText {
+          margin-top: $space-xxl;
+          text-align: center;
+          color: $ex-light-gray;
+        }
+      }
+      .segmentContent {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 400px;
+        padding: $space-lg;
+        background-color: $bg-light-gray;
+
+        ul {
+          width: 100%;
+          li {
+            text-transform: uppercase;
+            font-weight: $bold;
+            width: 100%;
+            border-bottom: 1px solid $ex-light-gray;
+            padding: 10px;
+            svg {
+              color: $green;
+            }
+            p {
+              font-weight: $regular;
+              font-size: $text-sm;
+              margin-top: $space-xxs;
+              color: $ex-light-gray;
+              text-transform: capitalize;
+              line-height: $space-m;
+            }
+          }
+        }
+      }
+      .arrow {
+        background-color: $bg-light-gray;
+        position: absolute;
+        transform: rotate(45deg);
+        width: 40px;
+        height: 40px;
+        z-index: 0;
+        top: -15px;
+      }
+
+      .displayNone {
+        display: none;
+      }
+
+      .passive {
+        opacity: 0.6;
+      }
+
+      .green {
+        border-top: 2px solid $green;
+      }
+      .gray {
+        border-top: 2px solid $light-gray;
+      }
+      .orange {
+        border-top: 2px solid $orange;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .midSection {
+    padding: 100px 50px;
+  }
+  .segment {
+    width: 30%;
+  }
+  .segmentContent {
+    height: 460px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .midSection {
+    padding: 100px $space-lg;
+  }
+  .segment {
+    height: 400px !important;
+    margin-bottom: $space-lg !important;
+  }
+  .segmentContent {
+    height: 430px !important;
+  }
+  .segmentContent ul li {
+    font-size: $text-sm;
+  }
+  .segmentContent ul p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .segmentContent {
+    height: auto !important;
+  }
+  .segmentContent ul {
+    margin-bottom: $space-lg;
+  }
+
+  .segmentContainer {
+    margin-bottom: $space-g !important;
+    width: 100% !important;
+  }
+
+  .segment {
+    height: auto !important;
+    margin-bottom: $space-xxl !important;
+  }
+}

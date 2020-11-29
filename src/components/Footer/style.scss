@@ -1,0 +1,204 @@
+@import '../../assets/style/global.scss';
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: $dark-gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-family: $roboto-con;
+    margin-top: $space-xl;
+    letter-spacing: 1.6px;
+    font-size: $h2-l;
+    color: $ex-light-gray;
+    text-transform: uppercase;
+    margin-bottom: $space-g;
+  }
+
+  .guestbook {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: $space-xl $space-sg;
+    margin-bottom: $space-g;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 35%;
+      height: 430px;
+      background-color: $black;
+      padding: $space-m;
+      input {
+        font-family: $roboto;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        outline: none;
+        padding: $space-sm;
+        width: 85%;
+        margin-bottom: $space-xxl;
+      }
+
+      textarea {
+        font-family: $roboto;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        padding: $space-sm;
+        width: 85%;
+        margin-bottom: $space-xxl;
+        resize: none;
+      }
+
+      .danger {
+        border: 1px solid $red;
+        box-shadow: inset 0px 0px 8px 1px $red;
+      }
+    }
+    .record {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      height: 430px;
+      padding: $space-m;
+      background-color: $black;
+
+      .recordWrapper {
+        width: 90%;
+        overflow-y: auto;
+
+        .messageWrapper {
+          font-family: $roboto;
+          width: 95%;
+          background-color: $white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: $space-lg;
+          .messageHeader {
+            padding: $space-m $space-sm;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .userNamer {
+              font-family: $roboto;
+              font-weight: $bold;
+            }
+            .date {
+              font-family: $roboto;
+            }
+          }
+          .messageText {
+            width: 100%;
+            padding: 0 $space-sm $space-m;
+            span {
+              font-family: $roboto;
+              font-weight: $semibold;
+            }
+            p {
+              font-family: $roboto;
+              line-height: $space-lg;
+            }
+          }
+        }
+
+        &::-webkit-scrollbar {
+          width: 16px;
+        }
+        &::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          background-color: lightgray;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $light-gray;
+          height: 1rem;
+        }
+      }
+    }
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: $space-xl $space-g;
+    background-color: $dark-black;
+    color: $ex-light-gray;
+
+    ul {
+      display: flex;
+      li {
+        margin-right: $space-xl;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .messageHeader {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+  .messageHeader .date {
+    font-size: $text-sm;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .record {
+    width: 52% !important;
+    padding: $space-xs !important;
+  }
+  form {
+    width: 42% !important;
+    padding: $space-m $space-xs !important;
+  }
+
+  .nav ul li {
+    font-size: $text-sm !important;
+  }
+  .nav p {
+    font-size: $text-sm !important;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .guestbook {
+    flex-direction: column !important;
+  }
+  .record,
+  form {
+    width: 100% !important;
+  }
+  form {
+    margin-bottom: $space-xl !important;
+    padding: $space-m !important;
+  }
+  .record {
+    padding: $space-m !important;
+  }
+
+  .nav {
+    justify-content: center !important;
+  }
+
+  .nav p {
+    display: none !important;
+  }
+}

@@ -1,0 +1,90 @@
+@import '../../assets/style/global.scss';
+.topSection {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $red;
+  text-align: center;
+  padding: 8.75rem $space-sg $space-xg;
+
+  .logo {
+    position: absolute;
+    top: -70px;
+  }
+  .h2 {
+    z-index: 1;
+    margin-bottom: $space-sg;
+    h2 {
+      word-break: break-all;
+      font-size: $h2;
+      color: $white;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+  }
+  .h1 {
+    z-index: 1;
+    margin-bottom: $space-sg;
+
+    h1 {
+      word-break: break-all;
+      font-size: $h1;
+      font-family: $roboto-con;
+      color: $dark-white;
+      letter-spacing: -0.8px;
+      text-transform: uppercase;
+      text-shadow: -2px 3px 6px #000000;
+    }
+  }
+  .h3 {
+    z-index: 1;
+    width: 80%;
+    margin-bottom: $space-g;
+    h3 {
+      word-break: break-all;
+      font-size: $text-m;
+      color: $dark-white;
+      font-weight: $regular;
+      text-align: justify;
+      line-height: $text-m;
+    }
+  }
+
+  .tringle {
+    position: absolute;
+    background-color: $red;
+    transform: rotate(45deg);
+    width: 200px;
+    height: 200px;
+    z-index: 0;
+    bottom: -35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topSection {
+    padding: $space-xl $space-sg;
+  }
+  .topSection .logo {
+    position: relative;
+    top: 0;
+    margin-bottom: $space-xl;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .h1 h1 {
+    font-size: 3rem !important;
+  }
+
+  .h2 h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .h3 {
+    width: 100% !important;
+  }
+}
