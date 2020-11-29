@@ -7,16 +7,15 @@
 ```bash
 npm install
 ```
-
-## Other parts about project
-
-Linglee CSS Grid implementation based on https://dribbble.com/shots/10071908-Project-Management-Application
-
 ### Screenshots
 
 #### Desktop UI
 
-![web_UI](https://user-images.githubusercontent.com/20819760/92442877-507f8680-f1b9-11ea-92f2-a1dd13ab771b.png)
+![desktop-1](https://user-images.githubusercontent.com/20819760/100536820-342d3c00-3234-11eb-8683-9d678212e4ee.PNG)
+
+![desktop-2](https://user-images.githubusercontent.com/20819760/100536842-56bf5500-3234-11eb-82be-e9f07110d4ef.PNG)
+
+![desktop-3](https://user-images.githubusercontent.com/20819760/100536844-58891880-3234-11eb-94a5-df59a534f5df.PNG)
 
 
 #### Mobile UI
